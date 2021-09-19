@@ -12,13 +12,13 @@
                  },
     "RTX 3070 TI": {
                    "NVidia Founders Edition": "https://www.bestbuy.com/site/nvidia-geforce-rtx-3070-ti-8gb-gddr6x-pci-express-4-0-graphics-card-dark-platinum-and-black/6465789.p?skuId=6465789",
-                   "Placeholder 2": 0,
-                   "Placeholder 3": 0,
-                   "Placeholder 4": 0,
-                   "Placeholder 5": 0,
-                   "Placeholder 6": 0,
-                   "Placeholder 7": 0,
-                   "Placeholder 8": 0
+                   "ASUS TUF 8GB": "https://www.bestbuy.com/site/asus-tuf-rtx3070ti-8gb-gddr6x-pci-express-4-0-graphics-card-black/6467840.p?skuId=6467840",
+                   "MSI GAMING X TRIO 8GB": "https://www.bestbuy.com/site/msi-nvidia-geforce-rtx-3070-ti-gaming-x-trio-8g-gddr6-pci-express-4-0-graphics-card/6467497.p?skuId=6467497",
+                   "MSI VENTUS 3X OC 8GB": "https://www.bestbuy.com/site/msi-nvidia-geforce-rtx-3070-ti-ventus-3x-oc-8gb-gddr6-pci-express-4-0-graphics-card/6467500.p?skuId=6467500",
+                   "GIGABYTE GAMING OC 8GB": "https://www.bestbuy.com/site/gigabyte-nvidia-geforce-rtx-3070ti-gaming-oc-8gb-gddr6x-pci-express-4-0-graphics-card-black/6467779.p?skuId=6467779",
+                   "EVGA FTW3 ULTRA GAMING 8GB": "https://www.bestbuy.com/site/evga-nvidia-geforce-rtx-3070-ti-ftw3-ultra-gaming-8gb-gddr6x-pci-express-4-0-graphics-card/6467285.p?skuId=6467285",
+                   "GIGABYTE AORUS MASTER 8GB": "https://www.bestbuy.com/site/gigabyte-nvidia-geforce-rtx-3070ti-aorus-master-8gb-gddr6x-pci-express-4-0-graphics-card-black/6467788.p?skuId=6467788",
+                   "ASUS STRIX 8GB": "https://www.bestbuy.com/site/asus-nvidia-geforce-rtx-3070ti-8gb-gddr6x-pci-express-4-0-graphics-card-black/6467838.p?skuId=6467838"
                    },
     "RTX 3070": {
                   "NVidia Founders Edition": "https://www.bestbuy.com/site/nvidia-geforce-rtx-3070-8gb-gddr6-pci-express-4-0-graphics-card-dark-platinum-and-black/6429442.p?skuId=6429442",
@@ -36,9 +36,7 @@
                    "ASUS TUF": "https://www.bestbuy.com/site/asus-tuf-rtx3060ti-8gb-gddr6-pci-express-4-0-graphics-card/6452573.p?skuId=6452573",
                    "GIGABYTE EAGLE OC": "https://www.bestbuy.com/site/gigabyte-nvidia-geforce-rtx-3060-ti-eagle-oc-8g-gddr6-pci-express-4-0-graphics-card-black/6442485.p?skuId=6442485",
                    "GIGABYTE GAMING OC": "https://www.bestbuy.com/site/gigabyte-nvidia-geforce-rtx-3060-ti-gaming-oc-8g-gddr6-pci-express-4-0-graphics-card-black/6442484.p?skuId=6442484",
-                   "MSI Ventus 2x": "https://www.bestbuy.com/site/msi-nvidia-geforce-rtx-3060-ti-ventus-2x-oc-bv-8gb-gddr6-pci-express-4-0-graphics-card-black/6441172.p?skuId=6441172",
-                   "Placeholder 7": 0,
-                   "Placeholder 8": 0
+                   "MSI Ventus 2x": "https://www.bestbuy.com/site/msi-nvidia-geforce-rtx-3060-ti-ventus-2x-oc-bv-8gb-gddr6-pci-express-4-0-graphics-card-black/6441172.p?skuId=6441172"
                   },
     "RTX 3060": {
                  "MSI Ventus 3X": "https://www.bestbuy.com/site/msi-nvidia-geforce-rtx-3060-ventus-3x-12g-oc-12gb-gddr6-pci-express-4-0-graphics-card-black/6452940.p?skuId=6452940",
@@ -47,18 +45,12 @@
                  "GIGABYTE EAGLE OC": "https://www.bestbuy.com/site/gigabyte-nvidia-geforce-rtx-3060-eagle-oc-12gb-gddr6-pci-express-4-0-graphics-card/6454689.p?skuId=6454689",
                  "MSI Ventus 2X": "https://www.bestbuy.com/site/msi-nvidia-geforce-rtx-3060-ventus-2x-12g-oc-12gb-gddr6-pci-express-4-0-graphics-card-black/6462173.p?skuId=6462173",
                  "ASUS STRIX": "https://www.bestbuy.com/site/asus-nvidia-geforce-rtx-3060-12gb-gddr6-pci-express-4-0-graphics-card-black/6460665.p?skuId=6460665",
-                 "ASUS TUF": "https://www.bestbuy.com/site/asus-tuf-gaming-nvidia-geforce-rtx-3060-12gb-gddr6-pci-express-4-0-graphics-card-black/6460666.p?skuId=6460666",
-                 "Placeholder 8": 0
+                 "ASUS TUF": "https://www.bestbuy.com/site/asus-tuf-gaming-nvidia-geforce-rtx-3060-12gb-gddr6-pci-express-4-0-graphics-card-black/6460666.p?skuId=6460666"
                 },
     "GTX 1660 TI": {
                    "EVGA SC ULTRA GAMING": "https://www.bestbuy.com/site/evga-sc-ultra-gaming-nvidia-geforce-gtx-1660-ti-6gb-gddr6-pci-express-3-0-graphics-card-black-gray/6373500.p?skuId=6373500",
                    "GIGABYTE": "https://www.bestbuy.com/site/gigabyte-nvidia-geforce-gtx-1660-ti-6gb-gddr6-pci-express-3-0-graphics-card-black-gray/6409180.p?skuId=6409180",
-                   "MSI Gaming X": "https://www.bestbuy.com/site/msi-geforce-gtx-1660-ti-gaming-x-6gb-gddr6-pci-express-3-0-graphics-card/6330461.p?skuId=6330461",
-                   "Placeholder 4": 0,
-                   "Placeholder 5": 0,
-                   "Placeholder 6": 0,
-                   "Placeholder 7": 0,
-                   "Placeholder 8": 0
+                   "MSI Gaming X": "https://www.bestbuy.com/site/msi-geforce-gtx-1660-ti-gaming-x-6gb-gddr6-pci-express-3-0-graphics-card/6330461.p?skuId=6330461"
                   }
 }
 
