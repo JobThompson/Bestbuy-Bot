@@ -14,6 +14,7 @@ as a primary payment method.
 I know, its a pain in the ass, but the program doesnt like being put in an EXE file.
 The links for the 2 program requirements are below:
 Pycharm Community: https://www.jetbrains.com/pycharm/download/#section=windows
+
 Python 3: https://www.python.org/downloads/
 
 Open GUI.py in pycharm, and in the Terminal tab at the bottom,
