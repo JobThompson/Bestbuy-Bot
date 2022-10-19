@@ -1,0 +1,5 @@
+{
+    "CredentialsFile": "./config_files/Persistent_Creds_File.json",
+    "ProductListFile": "./config_files/Product_List_File.json",
+    "IsHeadlessFlag": false
+}
