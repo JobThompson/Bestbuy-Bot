@@ -1,4 +1,5 @@
 import json
+from Classes.Config import instanceConfig
 
 class ProductSelection():
     def __init__(self, file) -> None:
@@ -37,3 +38,4 @@ class Product():
         self.name = name
         self.url = url
         
+product_selection = ProductSelection(instanceConfig.product_list_file)

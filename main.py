@@ -1,14 +1,14 @@
-
-
-from Classes.Config import ConfigObject
-from Classes.ProductSelection import ProductSelection
 from pprint import pprint
-from Classes.Config import instanceConfig
 from Classes.Credentials import credentials
+from Classes.Pages.LandingPage import LandingPage
+from Classes.Pages.ProductCategoriesPage import ProductCategories
+from Classes.ProductSelection import product_selection
 
 def main():
-    product_selection = ProductSelection(instanceConfig.product_list_file)
-    pprint(vars(credentials).items())
+    # pprint([[products.url for products in product.products] for product in product_selection.product_list])
+    # pprint(vars(credentials).items())
+    # ProductCategories()
+    LandingPage()
     
 
 if __name__ == '__main__':
