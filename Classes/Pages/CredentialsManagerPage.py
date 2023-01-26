@@ -25,8 +25,6 @@ def handle_set_as_default(values):
 
 
 def credentials_manager():
-    """This function sets default credentials to an external JSON file, so that the program can pull the info for later
-    runs. It also allows the user to clear the existing credentials from the file, allowing them to set new ones."""
     localCredentials = type('obj', (object,), {
         'email': programState.Credentials.email,
         'password': programState.Credentials.password,
