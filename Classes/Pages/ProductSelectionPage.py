@@ -5,8 +5,6 @@ from Classes.GUIButtons import submenu_button2
 from ProgramState import programState
 
 def create_button_rows(choice, product_names):
-    """Creates the columns for the custom layout for the submenu pages, depending on how many entries there are per
-    selection choice."""
     column_1 = [[sg.Text(str(choice) + "'s:")], [sg.Text('')]]
     
     for product in product_names:
