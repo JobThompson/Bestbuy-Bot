@@ -10,6 +10,7 @@ class ProgramState:
         self.SelectedProduct = None
         self.HasCredentials = False
         self.Credentials = Credentials()
+        self.RefreshAttempts = 0
         
     def set_custom_URL(self, custom_URL):
         self.CustomUrl = custom_URL
