@@ -339,7 +339,7 @@ def url_input():
 
 
 def buy_product(product, email, password, cvv, head):
-    """This function is the bot that opens a firefox browser, signs into the bestbuy site, then calls the product URL.
+    """This function is the bot that opens a firefox browser, signs into the BestBuy site, then calls the product URL.
     If the product is in stock, it purchases the product. If the product is not in stock, it refreshes the page until
     it is."""
     h.start_firefox('https://www.bestbuy.com/identity/global/signin', headless=head)
