@@ -1,4 +1,5 @@
 import PySimpleGUI as sg
+from Classes.Logging import handle_exit
 from Classes.GUIButtons import gui_button, back_button, submit_button
 from Classes.ProductSelection import product_selection
 
@@ -14,7 +15,7 @@ def custom_URL_page():
         
         match event:
             case sg.WIN_CLOSED:
-                exit(0)
+                handle_exit()
             
             case 'Back':
                 break

@@ -1,5 +1,6 @@
 from pprint import pprint
 import PySimpleGUI as sg
+from Classes.Logging import handle_exit
 from Classes.GUIButtons import landing_page_button
 from Classes.ProductSelection import product_selection
 from Classes.Pages.CredentialsManagerPage import credentials_manager
@@ -23,7 +24,7 @@ def LandingPage():
         event, _ = window.read()
         match event:
             case sg.WIN_CLOSED: 
-                exit(0)
+                handle_exit()
                 
             case 'Credentials Manager':
                 handle_credentials_manager()
