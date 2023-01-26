@@ -15,16 +15,18 @@ def create_logfile():
     """Creates a new Log file with a date Identifier. If there is an existing log file with that identifier,
     the function adds an iterative number to the end of the file name until it gets to a file name that doesn't' exist."""
     date = str(datetime.datetime.now().strftime("%m_%d_%Y")) # sets date to a variable
-    logfile = (f'Log_{date}.log') # creates a new file name using date variable set above as the identifier
     multiple = 1
+    logfile = (f'Log_{date}_{str(multiple)}.log') # creates a new file name using date variable set above as the identifier
+    
     while True:  # compares the last log file to the created file name
         try:
             open(f'{instanceConfig.log_directory}/{logfile}', "x") # creates a new file using the new log file name
             break
         except Exception as e:  # if the file name is the same, it adds an iterating number to the end
             pprint(e)
-            logfile = (f'Log_{date}_{str(multiple)}.log')
             multiple += 1  # iterates the number at the end of the file
+            logfile = (f'Log_{date}_{str(multiple)}.log')
+            
     logfile = (f'{instanceConfig.log_directory}/{logfile}') # sets logfile to the full filepath.
     logging.basicConfig(filename=logfile, level=logging.INFO) # sets the logging file as the newly created file.
     return logfile
