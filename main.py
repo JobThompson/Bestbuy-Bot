@@ -1,14 +1,19 @@
 from pprint import pprint
-from Classes.Credentials import credentials
 from Classes.Pages.LandingPage import LandingPage
 from Classes.Pages.ProductCategoriesPage import ProductCategories
 from Classes.ProductSelection import product_selection
+from ProgramState import programState
+
+def check_for_credentials():
+    if(programState.Credentials.email != '' and programState.Credentials.password != '' and programState.Credentials.card_cvv != ''):
+        programState.set_has_credentials(True)
+    else:
+        programState.set_has_credentials(False)
 
 def main():
-    # pprint([[products.url for products in product.products] for product in product_selection.product_list])
-    # pprint(vars(credentials).items())
-    # ProductCategories()
+    check_for_credentials()
     LandingPage()
+    # ExecuteAction()
     
 
 if __name__ == '__main__':
