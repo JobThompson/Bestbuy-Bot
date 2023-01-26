@@ -30,6 +30,14 @@ class Credentials ():
         self.write_to_persistent_creds_file('CardExprDate', self.card_expr_date)
         self.write_to_persistent_creds_file('CardCVV', self.card_cvv)
         return
+    
+    def wipe_all_values_from_persistent_storage(self):
+        self.write_to_persistent_creds_file('Email', '')
+        self.write_to_persistent_creds_file('Password', '')
+        self.write_to_persistent_creds_file('CardNumber', '')
+        self.write_to_persistent_creds_file('CardExprDate', '')
+        self.write_to_persistent_creds_file('CardCVV', '')
+        return
         
     def set_email(self, email):
         self.email = email
@@ -82,6 +90,3 @@ class Credentials ():
         encrypted_value = creds_file[key]
         value = self.fernet_instance.decrypt(encrypted_value).decode()
         return value
-    
-
-credentials = Credentials()
