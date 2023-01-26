@@ -2,12 +2,18 @@ import PySimpleGUI as sg
 from Classes.Logging import handle_exit
 from Classes.GUIButtons import gui_button, back_button, submit_button
 from Classes.ProductSelection import product_selection
+from ProgramState import programState
 
 def handle_submit(submitted_url):
-    pass
+    programState.CustomUrl = submitted_url
 
 def custom_URL_page():
-    layout = [[sg.Text('Enter the URL for the product:')], [back_button(), submit_button()]]
+    
+    layout = [[
+                [sg.Text('Enter the URL for the product:', justification='left')], [sg.InputText('', key='url_input')], 
+                sg.HSeparator(),
+                [back_button(), submit_button()],
+            ]]
     window = sg.Window("URL Selection", layout, size=(400, 400), element_justification='c')
 
     while True:
@@ -21,7 +27,7 @@ def custom_URL_page():
                 break
             
             case 'Submit':
-                handle_submit(values[0])
+                handle_submit(values['url_input'])
                 break
             
             case _:
