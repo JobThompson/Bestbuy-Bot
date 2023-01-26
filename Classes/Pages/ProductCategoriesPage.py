@@ -2,6 +2,8 @@ from pprint import pprint
 import PySimpleGUI as sg
 from Classes.GUIButtons import gui_button
 from Classes.ProductSelection import product_selection
+from Classes.Logging import write_to_log
+from Classes.Pages.ProductSelectionPage import ProductSelectionPage
 
 def ProductCategories():
     """Brings up the main menu for the program, with options for different GPU selections. Once a product stack is
@@ -10,33 +12,28 @@ def ProductCategories():
     array_of_buttons = get_category_buttons()
     array_of_buttons.insert(0, [sg.Text('Select the GPU Category you want:')])
     
-    layout = array_of_buttons
-    # column2 = [[gui_button('Custom URL')], [gui_button('Credentials Manager')]]
-    # layout = [[sg.Column(column1), sg.VSeparator(), sg.Column(column2)]]
+    back_button_column = [[sg.Button('Back', button_color=('black', 'darkred'), font=("Helvetica", 15), size=(7, 4))]]
+    
+    layout = [[sg.Column(array_of_buttons), sg.VSeparator(), sg.Column(back_button_column)]]
     window = sg.Window("GPU Selection", layout, size=(400, 305), element_justification='c')
     while True:
-        event, values = window.read()
-        if event == sg.WIN_CLOSED:
-            exit(0)
-        elif event == 'Credentials Manager':
-            window.close()
-            # credentials_manager()
-            exit()
-            product = gui()
-            break
-        else:
-            choice = event
-            if choice == 'Custom URL':
-                window.close()
-                exit()
-                # product = url_input()
+        event, _ = window.read()
+        match event:
+            case sg.WIN_CLOSED:
+                exit(0)
+                
+            case 'Back':
                 break
-            else:
-                window.close()
-                # product = display_list(choice)
-                exit()
-                break
-    return product
+            
+            case _:
+                try:
+                    ProductSelectionPage(event)
+                    break
+                except Exception as e:
+                    write_to_log('ERROR', e)
+                    break
+    window.close()
+    return
 
 
 def get_category_buttons():
