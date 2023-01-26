@@ -1,6 +1,6 @@
 import logging
 import datetime
-from Config import instanceConfig
+from Classes.Config import instanceConfig
 
 # TODO: Re-Write to allow for multiple log types to be written to the same file and rewrite the log file creation.
 
