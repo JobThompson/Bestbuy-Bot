@@ -35,6 +35,23 @@ class ConfigObject():
     def set_headless_flag(self, isHeadlessFlag):
         self.isHeadlessFlag = isHeadlessFlag
         return
+    
+    def write_all_values_to_persistent_storage(self):
+        self.write_to_persistent_config_file('CredentialsFile', self.credentials_file)
+        self.write_to_persistent_config_file('ProductListFile', self.product_list_file)
+        self.write_to_persistent_config_file('LogDirectory', self.log_directory)
+        self.write_to_persistent_config_file('IsHeadlessFlag', self.isHeadlessFlag)
+        return
+    
+    def write_to_persistent_config_file(self, key, value):
+        config_file = self.config_file
+        with open(config_file) as f:
+            config_values = json.load(f)
+        config_values[key] = value
+        
+        with open(self.config_file, "w") as f:
+            f.write(json.dumps(config_values))
+        return
 
 
 instanceConfig = ConfigObject('./config_files/config.json')
