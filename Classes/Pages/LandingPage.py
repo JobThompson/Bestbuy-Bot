@@ -2,10 +2,11 @@ from pprint import pprint
 import PySimpleGUI as sg
 from Classes.Logging import handle_exit
 from Classes.GUIButtons import landing_page_button
-from Classes.ProductSelection import product_selection
 from Classes.Pages.CredentialsManagerPage import credentials_manager
 from Classes.Pages.CustomURLPage import custom_URL_page
 from Classes.Pages.ProductCategoriesPage import ProductCategories
+from ProgramState import programState
+
 
 def handle_credentials_manager():
     credentials_manager()
@@ -31,15 +32,16 @@ def LandingPage():
                 
             case 'Get GPU from List':
                 handle_get_GPU_from_list()
-                break
+                if(programState.Action != None):
+                    break                
                 
             case 'Custom URL':
                 handle_custom_URL()
-                break
+                if(programState.CustomUrl != None):
+                    break    
                 
             case _:
                 window.close()
-                # product = display_list(choice)
                 exit()
                 
     window.close()      
