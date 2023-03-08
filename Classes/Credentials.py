@@ -38,6 +38,13 @@ class Credentials ():
         self.write_to_persistent_creds_file('CardExprDate', '')
         self.write_to_persistent_creds_file('CardCVV', '')
         return
+    
+    def wipe_all_values_from_memory(self):
+        self.email = ''
+        self.password = ''
+        self.card_number = ''
+        self.card_expr_date = ''
+        self.card_cvv = ''
         
     def set_email(self, email):
         self.email = email
