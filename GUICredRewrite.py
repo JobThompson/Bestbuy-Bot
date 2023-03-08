@@ -5,9 +5,6 @@ import json
 import logging
 import datetime
 import traceback
-# py -m pip install PySimpleGUI
-# py -m pip install helium
-
 
 """CONSTANTS AND CONFIGS"""
 PRODUCT_FILE = 'config/Info.json'
@@ -62,7 +59,7 @@ def write_to_log(info):
 
 def create_logfile():
     """Creates a new Log file with a date Identifier. If there is an existing log file with that identifier,
-    the function adds an iterative number to the end of the file name until it gets to a file name that doesnt exist."""
+    the function adds an iterative number to the end of the file name until it gets to a file name that doesn't exist."""
     date = str(datetime.datetime.now().strftime("%m_%d_%Y"))
     # sets date to a variable
     logfile = ('Log_' + date + '.log')
@@ -137,7 +134,7 @@ def credentials_manager():
                         json.dump(data, creds)
                     set_current_creds(email, password, cvv, head)
                     break
-            elif event == 'Submit':  # Writes the credentials to the current file. doesnt write to defaults.
+            elif event == 'Submit':  # Writes the credentials to the current file. doesn't write to defaults.
                 write_to_log('Credentials Submitted.')
                 email, password, cvv, head = set_cred_variables(values)
                 if email == "" or password == "" or cvv == "":

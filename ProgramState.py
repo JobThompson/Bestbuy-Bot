@@ -5,7 +5,6 @@ ACTIONS = [
     "MonitorScript",
 ]
 
-
 class ProgramState:
     def __init__(self) -> None:
         self.CustomUrl = None
