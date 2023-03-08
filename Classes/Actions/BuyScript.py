@@ -4,19 +4,16 @@ from Classes.Logging import write_to_log
 from Classes.Config import instanceConfig
 from ProgramState import programState
 
-def buy_product(product_url):
+def buy_script():
     """This function is the bot that opens a firefox browser, signs into the BestBuy site, then calls the product URL.
     If the product is in stock, it purchases the product. If the product is not in stock, it refreshes the page until
     it is."""
-    h.start_firefox('https://www.bestbuy.com/identity/global/signin', headless=instanceConfig.isHeadlessFlag) # Starts firefox instance, headless = True wont come up as a intractable window
-    h.write(programState.Credentials.email, into='Email Address') # Enters Email address into email input box from Info file
-    h.write(programState.Credentials.password, into='Password') # Enters password into password input box from Info file
-    h.click(h.S('.btn-secondary')) # Clicks log in
-    if programState.Action == 'Buy PreSet Product': # Directs the browser to pull up the specified product page.
-        h.go_to(programState.SelectedProduct.url) 
-    elif programState.Action == 'Buy PreSet Product':
-        h.go_to(programState.CustomUrl)
-        
+    h.start_firefox('https://www.bestbuy.com/identity/global/signin', headless=instanceConfig.isHeadlessFlag)  # Starts firefox instance, headless = True wont come up as a intractable window
+    h.write(programState.Credentials.email, into='Email Address')  # Enters Email address into email input box from Info file
+    h.write(programState.Credentials.password, into='Password')  # Enters password into password input box from Info file
+    h.click(h.S('.btn-secondary'))  # Clicks log in
+    h.go_to(programState.get_product_url())  # Directs the browser to pull up the specified product page.
+         
     h.Config.implicit_wait_secs = 2 # Sets the amount of time the script will wait for an element to load to 2 seconds
     
     while True:

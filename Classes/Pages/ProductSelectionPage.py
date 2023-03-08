@@ -18,7 +18,7 @@ def handle_null_selection():
 
 def ProductSelectionPage(choice):
     """Displays a list of the individual GPU's from the selected product stack."""
-    selection_list = None
+    selection_list = []
     
     for productList in product_selection.product_list:
         if productList.name == choice:
@@ -39,11 +39,13 @@ def ProductSelectionPage(choice):
                 break
             
             case _:
-                if selection_list[event] == 0:
+                for product in selection_list:
+                    if product.name == event:
+                        programState.set_selected_product(product)
+                        programState.set_action('BuyScript')
+                        break
+                if(programState.SelectedProduct == None):
                     handle_null_selection()
-                else:
-                    programState.set_selected_product(selection_list[event])
-                    break
-                
+                break
     window.close()
     return

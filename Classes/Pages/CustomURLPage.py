@@ -6,6 +6,7 @@ from ProgramState import programState
 
 def handle_submit(submitted_url):
     programState.CustomUrl = submitted_url
+    programState.set_action('BuyScript')
 
 def custom_URL_page():
     

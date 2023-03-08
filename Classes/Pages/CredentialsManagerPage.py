@@ -15,6 +15,7 @@ def handle_submit(values):
 def handle_clear_defaults():
     write_to_log('INFO', 'Defaults Cleared.')
     programState.Credentials.wipe_all_values_from_persistent_storage()
+    programState.Credentials.wipe_all_values_from_memory()
     sg.popup_ok('Default Credentials Cleared!')
 
 def handle_set_as_default(values):

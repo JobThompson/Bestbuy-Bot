@@ -1,6 +1,9 @@
 from Classes.Credentials import Credentials
 
-ACTIONS = []
+ACTIONS = [
+    "BuyScript",
+    "MonitorScript",
+]
 
 
 class ProgramState:
@@ -17,7 +20,7 @@ class ProgramState:
     
     def set_action(self, action):
         try:
-            self.Action = ACTIONS[f'{action}']
+            self.Action = ACTIONS[ACTIONS.index(action)]
             return True
         except Exception as e:
             print(e)
@@ -28,6 +31,12 @@ class ProgramState:
     
     def set_has_credentials(self, value):
         self.HasCredentials = bool(value)
+        
+    def get_product_url(self):
+        if self.CustomUrl:
+            return self.CustomUrl
+        else:
+            return self.SelectedProduct.url
     
     
 programState = ProgramState()
