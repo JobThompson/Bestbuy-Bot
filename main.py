@@ -4,6 +4,7 @@ from Classes.Pages.LandingPage import LandingPage
 from Classes.Pages.ProductCategoriesPage import ProductCategories
 from Classes.ProductSelection import product_selection
 from ProgramState import programState
+from ExecuteAction import execute_action
 
 def check_for_credentials():
     if(programState.Credentials.email != '' and programState.Credentials.password != '' and programState.Credentials.card_cvv != ''):
@@ -15,7 +16,7 @@ def main():
     create_logfile()
     check_for_credentials()
     LandingPage()
-    # ExecuteAction()
+    execute_action()
     handle_exit()
     
 if __name__ == '__main__':
